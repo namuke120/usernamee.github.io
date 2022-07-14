@@ -1,0 +1,93 @@
+<?php
+if($_SERVER["REQUEST_METHOD"] != "POST"){
+	header("Location: index.html");
+	exit();
+}
+
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+
+
+$to = $_POST['email'];
+
+$subject = "お問い合わせありがとうございます。";
+
+
+$message = <<< EOM
+
+お問い合わせありがとうございます。
+
+以下の内容で承りました。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【 お名前 】
+{$_POST["name"]}
+
+【 メール 】
+{$_POST["email"]}
+
+【 性別 】
+{$_POST["sex"]}
+
+【 お住いの地域 】
+{$_POST["pref"]}
+
+【 お問い合わせ理由 】
+{$_POST["reason"]}
+
+【 お問い合わせ内容 】
+{$_POST["contact_body"]}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EOM;
+
+$headers = "From: support@example.com";
+
+mb_send_mail($to, $subject, $message, $headers); 
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="就活用自己紹介サイト">
+    <title>自己紹介ページ(永井)</title>
+    <!-- CSS -->
+    <link rel ="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href ="index.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- header -->
+<div id="home" class="big-bg"></div>
+<body>
+<header>
+
+    <h1>
+    <a href="index.html">永井</a>
+    </h1>
+
+<nav class="nav-list">
+    <ul>
+        <li><a href="#">個人情報</a></li>
+        <li><a href="#">SNSとか</a></li>
+        <li><a href="index2.html">お問い合わせ</a></li>
+    </ul>
+</header>
+
+<div class= "completeform-div">
+	<h2 >お問い合わせ完了</h2>
+ 	<p>お問い合わせありがとうございました。</p>
+ 	<p>１週間以内にお返事いたします。</p>
+ 	<p><a class="completeform" href="index.html">ページトップへ</p>
+</a>
+</div>
+
+     <footer class="footer2">
+    <div class="wrapper">
+        <p><small>©Nagai Soujun</small></p>
+
+</body>
+</html>

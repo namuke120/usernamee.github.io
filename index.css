@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    background-color: #ebebeb;
+}
+
+header{
+    width :100%;
+    padding:30px 4% 10px;
+    background-color: rgb(19, 19, 19);
+    position: fixed;
+    top : 0;
+    display: flex;
+    align-items:top;
+    opacity:0.7;
+}
+
+h1{
+    margin: 0px 20px 20px 0 ; padding: 0;
+    font-size: 20px;
+}
+
+a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    display: flex;
+}
+
+li{
+    margin: 5px 0 0 15px;
+    font-size: 15px;
+    padding:0 15px;
+}
+
+nav{
+    margin: 0 0 0 auto;
+}
+
+.nav-list a:hover{
+    transition:0.5s;
+    color:rgb(230, 223, 255);
+    opacity:0.5;
+}
+
+.contents{
+    text-align: center;
+    margin:400px 0px 0px 60px;
+    letter-spacing: 2px;
+    color:#000000
+}
+
+.contents a{
+    color: #000000;
+    font-weight: bold;
+    border-bottom: double;
+    border-width: 3px;
+}
+.contents a:hover{
+    transition:0.5s;
+    color:rgb(0, 38, 255);
+    opacity:0.5;
+}
+
+.contents-title{
+    font-size:70px;
+    letter-spacing:10px;
+    opacity: 0.7;
+}
+
+.contents p{
+    font-size:20px;
+    margin:10px 0 42px;
+}
+
+.big-bg{
+    background-size:cover;
+    background-position: center top;
+    background-repeat:no-repeat;
+}
+
+#home
+{
+    background-image: url();
+}
+
+
+/* ----- 背景用の動画ファイル ----- */
+video {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    z-index: -3;
+    opacity:0.7;
+  }
+
+  footer{
+    background: rgb(239, 239, 255);
+    text-align:center;
+    padding: 26px 0;
+    margin-top: 25%;
+  }
+
+  form{
+    margin-top:10%;
+    text-align: center;
+
+  }
+  .input-area{
+    margin-bottom: 50px;
+    
+  }
+
+  .input-area p{padding:30px;
+}
+
+  .btn-border {
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: rgb(255, 118, 118);
+    color:#ebebeb;
+    }
+
+    .btn-border a:hover{
+        background-color: rgb(0, 226, 151);
+        opacity:0.7;
+    }   
+
+
+  textarea{
+    width:250px;
+  }
+  .footer2{
+    margin-top:10%;
+  }
+
+  h2{
+    margin-bottom:50px;
+    letter-spacing: 7px;
+    font-size:50px;
+    opacity:0.7
+  }
+
+  .completeform{
+    color:#ff0000
+  }
+
+.completeform-div{
+  text-align: center;
+  margin-top:360px;
+}
